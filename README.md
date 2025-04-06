@@ -21,8 +21,10 @@ torchrun --nproc_per_node=4 main_ae.py \\
 ```
 
 ## Inference
-TODO:
 
+````bash
+python eval.py --pc_path your_point_cloud_saved_in_ply.ply
+````
 ## Pretrained Model
 https://huggingface.co/Zbalpha/LaGeM
 
