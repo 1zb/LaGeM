@@ -71,7 +71,7 @@ def main():
     surface = torch.from_numpy(surface.astype(np.float32)).to(device)
     
     with torch.no_grad():
-        outputs = model(surface[0], grid)['logits'][0]
+        outputs = model(surface[None], grid)['logits'][0]
 
         volume = outputs.view(density+1, density+1, density+1).permute(1, 0, 2).cpu().numpy() * (-1)
 
