@@ -1,0 +1,5 @@
+*.sh
+samples/
+output/
+eval.py
+shapenet*
