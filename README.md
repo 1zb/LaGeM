@@ -9,16 +9,14 @@
 [Project page](https://1zb.github.io/LaGeM/)
 
 ## Training
+16 GPUs (4 GPUs with accum_iter 4)
 ```bash
-torchrun --nproc_per_node=8 main_ae.py     \\
-        --accum_iter=4     \\
-        --model AutoEncoder      \\
-        --output_dir output/ae     \\
-        --log_dir output/ae     \\
-        --num_workers 32     \\
-        --point_cloud_size 8192     \\
-        --batch_size 16     \\
-        --epochs 500     \\
+torchrun --nproc_per_node=4 main_ae.py \\
+        --accum_iter=4 \\
+        --model AutoEncoder \\
+        --output output/ae \\
+        --num_workers 32 --point_cloud_size 8192 \\
+        --batch_size 16 --epoch 500 \\
         --warmup_epochs 1 --blr 5e-5 --clip_grad 1
 ```
 
@@ -26,7 +24,7 @@ torchrun --nproc_per_node=8 main_ae.py     \\
 TODO:
 
 ## Pretrained Model
-TODO:
+https://huggingface.co/Zbalpha/LaGeM
 
 ## Bibtex
 
