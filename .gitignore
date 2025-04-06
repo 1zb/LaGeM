@@ -3,3 +3,4 @@ samples/
 output/
 eval.py
 shapenet*
+__pycache__
